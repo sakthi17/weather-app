@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Weather APP Project - FCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--<div class="row">
+  <span id="dimension" style="position:absolute; left:10px; top:10px;"></span>
+</div>-->
+
+<body>
+  <div class="row" id="remove">
+    <span id="dimension" style="position:absolute; left:10px; top:0px;color:black;background:white;"></span>
+  </div>
+  
+  <div class="bg-overlay">
+    <div class="container page-header">
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-3">
+          <div class="project-heading column-style">
+            <!--<i class="fa fa-sun-o" style="font-size:40px"></i>-->
+            <div id="icon-box"><i class="material-icons">cloud_circle</i></div>
+            <div id="title">Weather Report</div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-5">
+          <div class="form-group column-style">
+            <select class="form-control" id="select-input">
+                <option selected value hidden>Search by</option>
+                <option value="current-location">current location</option>
+                <option value="city-name">city name</option>
+                <option value="coordinates">coordinates</option>
+        </select>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="input-group column-style">
+            <div class="input-box">
+              <div id="coord-box">
+                <input id='latbox' class='form-control coordinput-style' placeholder='Latitude' required />
+                <input id='lonbox' class='form-control coordinput-style' placeholder='Longitude' required />
+              </div>
+              <div id="city-box">
+                <input type="text" id="citybox" class="form-control" placeholder='City name here ' required />
+              </div>
+            </div>
+            <div class="input-group-btn">
+              <button id="enterbtn" class="btn btn-secondary" type="button">Go!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section id="display-area" style="display:none">
+      <div id="header" class="row">
+        <div class="col-xs-5 col-xs-offset-1 response-header-style" id="place"></div>
+        <div class="col-xs-6 response-header-style" id="time">
+            <span id="datestring"></span></br>
+            <span id="hms"></span>
+        </div>
+        </div>
+      
+      <div id="mid-section" class="row">
+          <div id="main-box" class="col-sm-4 col-sm-offset-2 col-xs-6">
+               <span id="kelvintemp" style="display:none"></span>
+                
+               <div class="row" id="wrapper">
+                  <div class="col-sm-8 col-xs-8" id="temp"></div>
+                  <div class="col-sm-4 col-xs-4" id="metric">
+                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                    <span id="tunit">C</span>
+                  </div>
+                </div>  
+              
+                <div class="row">
+                  <div class="col-sm-12" id="degreetoggle">
+                  <button type="button" id="btn-c" class="btn degree-btn">oC</button>
+                  <button type="button" id="btn-f" class="btn degree-btn">oF</button>
+              </div>
+                </div>  
+          </div>
+          <hr style="background:white;width:1px;height:175px;position:absolute;left:50%;top:15%">
+          <div id="w-response" class="col-sm-4 col-sm-offset-0 col-xs-6">
+              <div id="response-icon"></div>
+              <div id="description"></div>
+        </div>
+      </div>
+      
+      <div id="detailed">
+        <table id="table-id">
+          <tr>
+            <td>humidity</td>
+            <td><span></span> %</td>
+          </tr>
+          <tr>
+            <td>pressure</td>
+            <td><span></span> hPa</td>
+          </tr>
+          <tr>
+            <td>wind</td>
+            <td><span id="windspeed"> m/s</span ><br><span id="winddegree"> degree</span></td>
+          </tr>
+          <tr>
+            <td>min temp</td>
+            <td><span></span> &deg;C</td>
+          </tr>
+          <tr>
+            <td>max temp</td>
+            <td><span></span> &deg;C</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
